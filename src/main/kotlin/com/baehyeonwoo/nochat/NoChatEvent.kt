@@ -48,7 +48,7 @@ class NoChatEvent : Listener {
         val sm = server.scoreboardManager
         val sc = sm.mainScoreboard
 
-        if (p.uniqueId.toString() !in administrator) {
+        if (p.uniqueId.toString() in administrator) {
             val administrator = sc.getTeam("admin")
             administrator?.addEntry(p.name)
         }
